@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
  */
 @Controller
 public class HomePageController {
-    @RequestMapping("/")
-    String home(Model model){
-        return "Hello World!";
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String home(){
+        return "admin/home/index";
     }
 }
